@@ -1,0 +1,216 @@
+{
+  "contractName": "JobPost",
+  "abi": [
+    {
+      "constant": true,
+      "inputs": [],
+      "name": "jobCount",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "payable": false,
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "metadata": "{\"compiler\":{\"version\":\"0.5.16+commit.9c3226ce\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"constant\":true,\"inputs\":[],\"name\":\"jobCount\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"payable\":false,\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/C/Users/Gary/Desktop/BlockChain/jobPosting/contracts/JobPost.sol\":\"JobPost\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/C/Users/Gary/Desktop/BlockChain/jobPosting/contracts/JobPost.sol\":{\"keccak256\":\"0x3c433c54a0a16e6a15f6f268bab5fa73fcd8f807fb2ffd30c210e7173e34174d\",\"urls\":[\"bzz-raw://439bbd30625f0925bb87e50c21a8c3c5b5923447017a7bbff137349d825342d2\",\"dweb:/ipfs/QmfWKSMms5XhM7FTAnC4kAgcQuJx4QQA6Pumw1Xtn6yVqx\"]}},\"version\":1}",
+  "bytecode": "0x608060405260008055348015601357600080fd5b506084806100226000396000f3fe6080604052348015600f57600080fd5b506004361060285760003560e01c80634c5d8a0f14602d575b600080fd5b60336049565b6040518082815260200191505060405180910390f35b6000548156fea265627a7a723158200a452b7d31dcf0bb34ef7882de0147f4be4fa6695ea350a2891832b081bb951d64736f6c63430005100032",
+  "deployedBytecode": "0x6080604052348015600f57600080fd5b506004361060285760003560e01c80634c5d8a0f14602d575b600080fd5b60336049565b6040518082815260200191505060405180910390f35b6000548156fea265627a7a723158200a452b7d31dcf0bb34ef7882de0147f4be4fa6695ea350a2891832b081bb951d64736f6c63430005100032",
+  "sourceMap": "49:149:0:-;;;153:1;130:24;;49:149;8:9:-1;5:2;;;30:1;27;20:12;5:2;49:149:0;;;;;;;",
+  "deployedSourceMap": "49:149:0:-;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;49:149:0;;;;;;;;;;;;;;;;;;;130:24;;;:::i;:::-;;;;;;;;;;;;;;;;;;;;;;;:::o",
+  "source": "pragma solidity ^0.5.0;\r\n\r\n// create a contract\r\ncontract JobPost {\r\n\t//create a state variable to keep track of number of jobs\r\n\tuint public jobCount = 0; //public allows us to read the variable\r\n}",
+  "sourcePath": "C:/Users/Gary/Desktop/BlockChain/jobPosting/contracts/JobPost.sol",
+  "ast": {
+    "absolutePath": "/C/Users/Gary/Desktop/BlockChain/jobPosting/contracts/JobPost.sol",
+    "exportedSymbols": {
+      "JobPost": [
+        5
+      ]
+    },
+    "id": 6,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5,
+        "linearizedBaseContracts": [
+          5
+        ],
+        "name": "JobPost",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4,
+            "name": "jobCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 5,
+            "src": "130:24:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "130:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 3,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "153:1:0",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          }
+        ],
+        "scope": 6,
+        "src": "49:149:0"
+      }
+    ],
+    "src": "0:198:0"
+  },
+  "legacyAST": {
+    "absolutePath": "/C/Users/Gary/Desktop/BlockChain/jobPosting/contracts/JobPost.sol",
+    "exportedSymbols": {
+      "JobPost": [
+        5
+      ]
+    },
+    "id": 6,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 1,
+        "literals": [
+          "solidity",
+          "^",
+          "0.5",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "0:23:0"
+      },
+      {
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 5,
+        "linearizedBaseContracts": [
+          5
+        ],
+        "name": "JobPost",
+        "nodeType": "ContractDefinition",
+        "nodes": [
+          {
+            "constant": false,
+            "id": 4,
+            "name": "jobCount",
+            "nodeType": "VariableDeclaration",
+            "scope": 5,
+            "src": "130:24:0",
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_uint256",
+              "typeString": "uint256"
+            },
+            "typeName": {
+              "id": 2,
+              "name": "uint",
+              "nodeType": "ElementaryTypeName",
+              "src": "130:4:0",
+              "typeDescriptions": {
+                "typeIdentifier": "t_uint256",
+                "typeString": "uint256"
+              }
+            },
+            "value": {
+              "argumentTypes": null,
+              "hexValue": "30",
+              "id": 3,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "number",
+              "lValueRequested": false,
+              "nodeType": "Literal",
+              "src": "153:1:0",
+              "subdenomination": null,
+              "typeDescriptions": {
+                "typeIdentifier": "t_rational_0_by_1",
+                "typeString": "int_const 0"
+              },
+              "value": "0"
+            },
+            "visibility": "public"
+          }
+        ],
+        "scope": 6,
+        "src": "49:149:0"
+      }
+    ],
+    "src": "0:198:0"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.5.16+commit.9c3226ce.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x550A88299a099376353F38298911909DF593aEA8",
+      "transactionHash": "0xa41518de1f90a4ebd06213a67d827b06a0acba9a0ac6881e456102a080baac70"
+    }
+  },
+  "schemaVersion": "3.2.4",
+  "updatedAt": "2020-10-04T01:42:48.159Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
