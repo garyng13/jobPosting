@@ -1,6 +1,6 @@
 const JobList = artifacts.require('./JobPost.sol')
 
-contract('TodoList', (accounts) => {
+contract('JobPost', (accounts) => {
   before(async () => {
     this.jobList = await JobList.deployed()
   })
@@ -13,7 +13,7 @@ contract('TodoList', (accounts) => {
     assert.notEqual(address, undefined)
   })
 
-  it('lists tasks', async () => {
+  it('lists jobs', async () => {
     const jobCount = await this.jobList.jobCount()
     const job = await this.jobList.jobs(jobCount)
     assert.equal(job.id.toNumber(), jobCount.toNumber())
@@ -22,13 +22,13 @@ contract('TodoList', (accounts) => {
     assert.equal(jobCount.toNumber(), 1)
   })
 
-  it('creates tasks', async () => {
-    const result = await this.jobList.createJob('A new job')
+  it('creates jobs', async () => {
+    const result = await this.jobList.createJob('Java developer in Auckland')
     const jobCount = await this.jobList.jobCount()
     assert.equal(jobCount, 2)
     const event = result.logs[0].args
     assert.equal(event.id.toNumber(), 2)
-    assert.equal(event.jobDescription, 'A new job')
+    assert.equal(event.jobDescription, 'Java developer in Auckland')
     assert.equal(event.jobRemove, false)
   })
 

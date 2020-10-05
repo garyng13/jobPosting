@@ -18,6 +18,14 @@
     <![endif]-->
 
     <style>
+    .card-columns {
+  @include media-breakpoint-only(lg) {
+    column-count: 4;
+  }
+  @include media-breakpoint-only(xl) {
+    column-count: 5;
+  }
+}
       main {
         margin-top: 60px;
       }
@@ -56,22 +64,30 @@
           <div id="loader" class="text-center">
             <p class="text-center">Loading...</p>
           </div>
-          <div id="content">
-          <!--
-            <form onSubmit="App.createTask(); return false;">
+          <div id="content">       
+            <form onSubmit="App.createJob(); return false;">
               <input id="newTask" type="text" class="form-control" placeholder="Post Job..." required>
               <input type="submit" hidden="">
-            </form>
-            -->
-            <ul id="taskList" class="list-unstyled">
+            </form>  
+
+            <div id="taskList" class="list-unstyled">
               <div class="jobTemplate" class="checkbox" style="display: none">
                 <label>
-                    <h3>i lov car</h3>
-                  <input type="checkbox" />
-                  <span class="content">Task content goes here...</span>
+                  <!--<input type="checkbox" />
+                  <span class="content">Task content goes here...</span>-->
+                    <div class="container-fluid">
+                        <div class="row">
+                          <div class="card" class="card-column p-3">
+                            <div id="taskList" class="card-body" class="jobTemplate">
+                            <input type="checkbox" />
+                            <span class="content">Task content goes here...</span>
+                          </div>
+                        </div>
+                    </div>
+            </div>
                 </label>
               </div>
-            </ul>
+            </div>
             <ul id="completedTaskList" class="list-unstyled">
             </ul>
           </div>

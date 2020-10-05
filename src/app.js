@@ -104,6 +104,13 @@ App = {
         }
     },
 
+    createJob: async () =>{
+        App.setLoading(true);
+        const content = $('#newTask').val();
+        await App.jobPost.createJob(content); //call createJob function in contract
+        window.location.reload();
+    },
+
     // display and hide "loading"
     setLoading: (boolean) =>{
         App.loading = boolean;

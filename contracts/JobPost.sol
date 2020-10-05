@@ -15,14 +15,22 @@ contract JobPost {
 	// an array like variable to store jobs
 	mapping(uint => Job) public jobs;
 
+	event JobCreated(
+		uint id,
+		string jobDescripton,
+		bool jobRemove
+	);
+
+
 	// constructor
 	constructor() public{
 		createJob("Java developer in Auckland");
 	}
 
 	//function to create job
-	function createJob(string memory jobDescription) public{
+	function createJob(string memory _jobDescription) public{
 		jobCount++;
-		jobs[jobCount] = Job(jobCount, jobDescription, false);
+		jobs[jobCount] = Job(jobCount, _jobDescription, false);
+		emit JobCreated(jobCount, _jobDescription, false);
 	}
 }
