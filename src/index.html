@@ -18,14 +18,7 @@
     <![endif]-->
 
     <style>
-    .card-columns {
-  @include media-breakpoint-only(lg) {
-    column-count: 4;
-  }
-  @include media-breakpoint-only(xl) {
-    column-count: 5;
-  }
-}
+
       main {
         margin-top: 60px;
       }
@@ -79,17 +72,20 @@
                         <div class="row">
                           <div class="card" class="card-column p-3">
                             <div id="taskList" class="card-body" class="jobTemplate">
-                            <input type="checkbox" />
+                            
                             <span class="content">Task content goes here...</span>
+                            <button id="input" name="subject" type="submit" value="HTML">DELETE JOB</button>
                           </div>
                         </div>
                     </div>
-            </div>
+                </div>
                 </label>
               </div>
             </div>
+            <!--
             <ul id="completedTaskList" class="list-unstyled">
             </ul>
+            -->
           </div>
         </main>
       </div>

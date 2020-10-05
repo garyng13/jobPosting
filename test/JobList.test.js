@@ -32,14 +32,14 @@ contract('JobPost', (accounts) => {
     assert.equal(event.jobRemove, false)
   })
 
-  /*
-  it('toggles task completion', async () => {
-    const result = await this.todoList.toggleCompleted(1)
-    const task = await this.todoList.tasks(1)
-    assert.equal(task.completed, true)
+  
+  it('toggles job remove', async () => {
+    const result = await this.jobList.jobToggle(1)
+    const job = await this.jobList.jobs(1)
+    assert.equal(job.jobToggle, true)
     const event = result.logs[0].args
     assert.equal(event.id.toNumber(), 1)
-    assert.equal(event.completed, true)
-  })*/
+    assert.equal(event.jobToggle, true)
+  })
 
 })

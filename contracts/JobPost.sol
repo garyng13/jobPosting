@@ -21,7 +21,10 @@ contract JobPost {
 		bool jobRemove
 	);
 
-
+	event jobToggleRemove(
+		uint id,
+		bool jobRemove
+	);
 	// constructor
 	constructor() public{
 		createJob("Java developer in Auckland");
@@ -32,5 +35,13 @@ contract JobPost {
 		jobCount++;
 		jobs[jobCount] = Job(jobCount, _jobDescription, false);
 		emit JobCreated(jobCount, _jobDescription, false);
+	}
+
+	//toggle jobToggle
+	function jobToggle(uint _id)public{
+		Job memory _job = jobs[_id];
+		_job.jobRemove = !_job.jobRemove;
+		jobs[_id] = _job;
+		emit jobToggleRemove(_id, _job.jobRemove);
 	}
 }

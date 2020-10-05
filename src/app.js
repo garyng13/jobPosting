@@ -88,10 +88,10 @@ App = {
 
         const $newJobTemplate = $jobTemplate.clone();
         $newJobTemplate.find('.content').html(jobDescription);
-        $newJobTemplate.find('input')
+        $newJobTemplate.find('#input')
                        .prop('name', jobId)
                        .prop('checked', jobRemove)
-                       //.on('click', App.toogleRemove);
+                       .on('click', App.jobToggle);
 
             if(jobRemove){
                 $('#completedTaskList').append($newJobTemplate);
@@ -108,6 +108,13 @@ App = {
         App.setLoading(true);
         const content = $('#newTask').val();
         await App.jobPost.createJob(content); //call createJob function in contract
+        window.location.reload();
+    },
+
+    jobToggle: async (e)=>{
+        App.setLoading(true);
+        const jobId = e.target.name;
+        await App.jobPost.jobToggle(jobId);
         window.location.reload();
     },
 
